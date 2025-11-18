@@ -1,6 +1,10 @@
-from typing import Any, Protocol
+from typing import Any, Protocol, TYPE_CHECKING
 
-from src.core.document import Document
+if TYPE_CHECKING:
+    from .cursor import Cursor
+    from .document import Document
+else:
+    Document = None  # Will be imported when needed
 
 
 class DocumentFactory(Protocol):
@@ -11,11 +15,12 @@ class DocumentFactory(Protocol):
         ...
 
 
-def document_factory(cursor: 'Cursor', document: dict) -> Document:
+def document_factory(cursor: 'Cursor', document: dict) -> 'Document':
     """Default document factory that returns Document objects"""
+    from .document import Document
     return Document(cursor, document)
 
 
-def dict_factory(document: dict) -> dict:
+def dict_factory(cursor: 'Cursor', document: dict) -> dict:
     """Document factory that returns dictionaries (default MongoDB behavior)"""
     return document

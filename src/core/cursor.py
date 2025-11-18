@@ -4,7 +4,7 @@ from typing import Any, Iterator, Optional
 from collections.abc import Sequence
 
 from .exceptions import InterfaceError, ProgrammingError
-from .document import DocumentFactory, document_factory, dict_factory
+from .document_factory import DocumentFactory, document_factory, dict_factory
 
 
 class Cursor:

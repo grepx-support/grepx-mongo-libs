@@ -7,7 +7,7 @@ from .constants import (
     DEFAULT_PORT, DEFAULT_HOST, DEFAULT_DATABASE
 )
 from .cursor import Cursor
-from .document import DocumentFactory
+from .document_factory import DocumentFactory
 from .exceptions import InterfaceError
 
 
