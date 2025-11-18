@@ -1,6 +1,6 @@
 from typing import Any, Protocol
 
-from core.document import Document
+from src.core.document import Document
 
 
 class DocumentFactory(Protocol):

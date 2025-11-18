@@ -4,7 +4,7 @@ import argparse
 import json
 from pprint import pprint
 
-from core.connection import connect
+from src.core.connection import connect
 
 
 class MongoDBCLI:
