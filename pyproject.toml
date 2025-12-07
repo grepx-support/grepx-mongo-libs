@@ -1,0 +1,18 @@
+# libs/mongo_connection/pyproject.toml
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mongo_connection"
+version = "1.0.0"
+description = "MongoDB connection library with configuration support"
+requires-python = ">=3.8"
+dependencies = [
+    "pymongo>=4.5.0",
+    "omegaconf>=2.3.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
